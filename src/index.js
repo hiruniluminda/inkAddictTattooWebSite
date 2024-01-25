@@ -3,15 +3,27 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter,Routes,Route } from 'react-router-dom';
+import Japaneesetattoo from './components/pages/japaneesetattoo';
+import Maori from './components/pages/maori';
+import Ornamental from './components/pages/Ornamental';
+import Polynesian from './components/pages/Polynesian';
+import Upcoming from "./components/upcoming";
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+  <BrowserRouter>
+    <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/japaneesetattoo" element={<Japaneesetattoo />} />
+        <Route path="/maori" element={<Maori />} />
+        <Route path="/ornamental" element={<Ornamental />} />
+        <Route path="/polynesian" element={<Polynesian />} />
+        <Route path="/upcoming" element={<Upcoming />} />
+      </Routes>
+  </BrowserRouter>
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+);
 reportWebVitals();

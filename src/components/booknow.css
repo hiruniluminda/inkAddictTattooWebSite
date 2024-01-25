@@ -1,0 +1,134 @@
+
+.modal {
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-image: linear-gradient(to bottom right, rgb(0, 0, 0), rgb(0, 0, 0));
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 300px #ffffff;
+    width: 80%;
+    color: white;
+  }
+  
+  .modal-img-p{
+    display: flex;
+  }
+  
+  .modal-img{
+    width: 50px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 30px rgb(142, 141, 141);
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #ffffff;
+    float: right;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: black;
+
+  }
+  
+  .close:hover,
+  .close:focus {
+    background-color: black;
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    cursor: pointer;
+  }
+/*form*/
+.input_row{
+    padding: 2px;
+    width: 300%;
+  }
+  .input_row #first_name{
+    padding: 7px;
+    width: 30%;
+    margin: 5px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 30px rgb(0, 0, 0);
+  }
+  .input_row #last_name{
+    padding: 7px;
+    width: 30%;
+    margin: 5px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 30px rgb(0, 0, 0);
+  
+  }
+  .input_row #email{
+    padding: 7px;
+    width: 30%;
+    margin: 5px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 30px rgb(0, 0, 0);
+  
+  }
+  .input_row #desc{
+    padding: 7px;
+    width: 30%;
+    margin: 5px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 30px rgb(0, 0, 0);
+  }
+  
+  #form-btn{
+    margin-left: 80%;
+  }
+  /**/ 
+  @media (width < 950px) {
+    .input_row{
+      padding: 2px;
+      width: 250%;
+    }
+    #form-btn{
+      margin-left: 65%;
+    }
+  }
+
+  @media (width < 800px) {
+    .input_row{
+      padding: 2px;
+      width: 200%;
+    }
+    #form-btn{
+      margin-left: 50%;
+    }
+  }
+
+@media (width < 650px) {
+  .input_row{
+    padding: 2px;
+    width: 160%;
+  }
+  #form-btn{
+    margin-left: 35%;
+  }
+}
+
+@media (width < 450px) {
+  .input_row{
+    padding: 2px;
+    width: 300%;
+    display:grid;
+  }
+  #form-btn{
+    margin-left: 25%;
+  }
+}
+

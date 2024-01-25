@@ -1,0 +1,115 @@
+:root {
+    --primary-color: #a27f14;
+    --primary-color-dark: #5a4b09;
+    --secondary-color: #fafcff;
+    --text-dark: #e0e0df;
+    --text-light: #767268;
+    --extra-light: #ffffff;
+    --max-width: 1200px;
+  }
+  
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+.section__container {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 5rem 1rem;
+  }
+  
+  .section__title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+  }
+  
+  .section__subtitle {
+    font-size: 1rem;
+    color: var(--text-dark);
+    max-width: calc(var(--max-width) / 2);
+  }
+
+  
+.tat_container :is(.section__title, .section__subtitle, .view__all) {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  .tat_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 4rem 0;
+  }
+  
+  .tat_card {
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tat_card img{
+    max-height: 350px;
+  
+  }
+  
+  .tat_details {
+    padding: 1rem;
+    display: grid;
+    gap: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient(to bottom right, rgb(46, 45, 45), rgb(22, 22, 21));
+    cursor: pointer;
+  }
+  
+  .rating {
+    color: goldenrod;
+  }
+  
+  .booking__price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .price span {
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: white;
+  }
+  
+  .book__now {
+    padding: 0.5rem 1.5rem;
+    color: var(--primary-color);
+    outline: none;
+    border: 1px solid var(--primary-color);
+    border-radius: 5rem;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .book__now:hover {
+    color: var(--extra-light);
+    background-color: var(--primary-color);
+  }
+
+  
+@media (width < 900px) {  
+    .tat_grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (width < 600px) {
+    .tat_grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  

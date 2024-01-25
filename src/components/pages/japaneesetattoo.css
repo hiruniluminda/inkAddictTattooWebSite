@@ -1,0 +1,257 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.headmain{
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 7%;
+  color: #5a4b09;
+  border-bottom: 4px dotted #403c3c;
+  border-radius: 50%;
+}
+.App {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: 0%;
+}
+
+.Tabs {
+  width: 80%;
+  height: auto;
+  min-height: 400px;
+  margin: 0.5px auto 1.5rem;
+  padding: 2rem 1rem;
+  color: #e8f0f2;
+}
+
+.react-tabs {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.react-tabs__tab-list {
+  width: 80%;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #5a4b09;
+  border-radius: 1rem;
+  padding-left: 0px;
+}
+
+.react-tabs__tab {
+  width: 50%;
+  padding: 1rem;
+  list-style: none;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.7s;
+}
+
+.react-tabs__tab--selected {
+  background: #5a4b09;
+}
+
+.react-tabs__tab--disabled {
+  color: GrayText;
+  cursor: default;
+}
+
+.react-tabs__tab:hover {
+  background: #5a4b09;
+}
+
+.react-tabs__tab:first-child {
+  border-bottom-left-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+
+.react-tabs__tab:last-child {
+  border-bottom-right-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.react-tabs__tab-panel {
+  display: none;
+}
+
+.react-tabs__tab-panel--selected {
+  display: block;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.gallery{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+.gallery .image{
+  width: calc(100% / 4);
+  padding: 17px;
+}
+.gallery .image span{
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  height: 200px;
+  margin-bottom: 5px;
+}
+.gallery .image img{
+  width: 100%;
+  vertical-align: middle;
+  transition: all 0.3s ease;
+}
+.gallery .image:hover img{
+  transform: scale(1.1);
+}
+.gallery .image.hide{
+  display: none;
+}
+.gallery .image.show{
+  animation: animate 0.4s ease;
+}
+@keyframes animate {
+  0%{
+    transform: scale(0.5);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+.preview-box{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  background: #1b1a1a;
+  max-width: 700px;
+  z-index: 5;
+  opacity: 0;
+  pointer-events: none;
+  border-radius: 3px;
+  padding: 0 5px 5px 5px;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+  color: white;
+}
+.preview-box.show{
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+  transition: all 0.3s ease;
+}
+.preview-box .details{
+  padding: 13px 15px 13px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.details .title{
+  display: flex;
+  font-size: 18px;
+  font-weight: 400;
+}
+.details .title p{
+  font-weight: 500;
+  margin-left: 5px;
+}
+.details .icon{
+  color: #ff0000;
+  font-size: 32px;
+  cursor: pointer;
+  margin-left: 25px;
+}
+.preview-box .image-box{
+  width: 100%;
+  display: flex;
+}
+.image-box img{
+  width: 100%;
+  border-radius: 0 0 3px 3px;
+  max-height: 400px;
+
+}
+.shadow{
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  display: none;
+  background: rgba(0,0,0,0.4);
+}
+.shadow.show{
+  display: block;
+}
+
+@media (max-width: 1000px) {
+  .gallery .image{
+    width: calc(100% / 3);
+  }
+  
+  .headmain{
+    margin-bottom: 5%;
+    margin-top: 15%;
+  }
+}
+@media (max-width: 800px) {
+  .gallery .image{
+    width: calc(100% / 2);
+  }
+  .headmain{
+    margin-bottom: 5%;
+    margin-top: 15%;
+  }
+
+}
+@media (max-width:700px) {
+  #tabList{
+    max-width: 600px;
+    padding: 7px 15px;
+  }
+  .headmain{
+    margin-bottom: 5%;
+    margin-top: 15%;
+  }
+
+}
+@media (max-width:600px) {
+  #tabList{
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .headmain{
+    margin-bottom: 5%;
+    margin-top: 15%;
+  }
+ 
+}
+
+@media (max-width:500px) {
+ 
+  .gallery .image{
+    width: calc(100%);
+
+  }
+  .headmain{
+    margin-bottom: 5%;
+    margin-top: 15%;
+  }
+ 
+}
+@media (max-width:400px) {
+  
+  .headmain{
+    margin-bottom: 5%;
+    margin-top: 25%;
+  }
+ 
+}
